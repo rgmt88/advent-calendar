@@ -13,7 +13,6 @@ const App = () => {
   }, []);
 
   const handleSquareClick = (number) => {
-    console.log(`Square ${number} clicked`);
     setModalInfo(`This is square number ${number}!`);
   };
 
