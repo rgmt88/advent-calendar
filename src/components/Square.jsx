@@ -1,8 +1,8 @@
-const Square = ({ number, onClick }) => {
+const Square = ({ day, img, onClick }) => {
     return (
-        <div className="square" onClick={() => onClick(number)}>
-            <div className="number">{number}</div>
-            <div className="figure">🎄</div>
+        <div className="square" onClick={onClick}>
+            <div className="day-number">{day}</div>
+            <img src={img} alt={`Christmas Image for Day ${day}`} className="day-image" />
         </div>
     );
 };
