@@ -5,6 +5,7 @@ import './styles/main.css'
 const App = () => {
   const [numbers, setNumbers] = useState([]);
   const [modalInfo, setModalInfo] = useState(null);
+  const [currentDay, setCurrentDay] = useState(null);
 
   // Advent data array
   const adventData = [
@@ -39,6 +40,12 @@ const App = () => {
   useEffect(() => {
     const shuffledNumbers = Array.from({ length: 25 }, (_, i) => i + 1).sort(() => Math.random() - 0.5);
     setNumbers(shuffledNumbers);
+
+    // Get current day of December 2025
+    const today = new Date();
+    const isDecember2025 = today.getFullYear() === 2024 && today.getMonth() === 10;
+    // December is month 11
+    setCurrentDay(isDecember2025 ? today.getDate() : null);
   }, []);
 
   // Escape key handler
@@ -74,11 +81,14 @@ const App = () => {
         {numbers.map((number) => {
           // Match shuffled number to adventData
           const dayData = adventData[number - 1];
+          const isAccessible = dayData.day <= currentDay;
+          
           return (
             <Square 
               key={dayData.day}
               day={dayData.day}
               img={dayData.img}
+              isAccessible={isAccessible}
               onClick={() => handleSquareClick(dayData)}
             />
           );
