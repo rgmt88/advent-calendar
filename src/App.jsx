@@ -52,7 +52,6 @@ const App = () => {
   return (
     <div className="app">
       <div className="tree">
-        <div className="tree-star">⭐</div>
         {rowSizes.map((rowSize, rowIndex) => {
           // Calculate the range of squares for this row
           const startIndex = rowSizes.slice(0, rowIndex).reduce((a, b) => a + b, 0);
