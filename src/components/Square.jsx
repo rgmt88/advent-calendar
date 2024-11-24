@@ -6,7 +6,6 @@ const Square = ({ day, img, isAccessible, onClick }) => {
         >
             <div className="day-number">{day}</div>
             <img src={img} alt={`Christmas Image for Day ${day}`} className="day-image" />
-            {!isAccessible && <div className="lock-overlay">🔒</div>}
         </div>
     );
 };

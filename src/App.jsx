@@ -47,22 +47,32 @@ const App = () => {
     setModalInfo(null);
   };
 
+  const rowSizes = [1, 2, 3, 4, 5, 6, 2, 2];
+
   return (
     <div className="app">
-      <div className="grid">
-        {numbers.map((number) => {
-          // Match shuffled number to adventData
-          const dayData = adventData[number - 1];
-          const isAccessible = dayData.day <= currentDay;
-          
+      <div className="tree">
+        <div className="tree-star">⭐</div>
+        {rowSizes.map((rowSize, rowIndex) => {
+          // Calculate the range of squares for this row
+          const startIndex = rowSizes.slice(0, rowIndex).reduce((a, b) => a + b, 0);
+          const rowSquares = numbers.slice(startIndex, startIndex + rowSize);
+
           return (
-            <Square 
-              key={dayData.day}
-              day={dayData.day}
-              img={dayData.img}
-              isAccessible={isAccessible}
-              onClick={() => handleSquareClick(dayData)}
-            />
+            <div key={rowIndex} className="tree-row">
+              {rowSquares.map((number) => {
+                const dayData = adventData[number - 1];
+                return (
+                  <Square 
+                    key={dayData.day}
+                    day={dayData.day}
+                    img={dayData.img}
+                    isAccessible={dayData.day <= currentDay}
+                    onClick={() => handleSquareClick(dayData)}
+                  />
+                );
+              })}
+            </div>
           );
         })}
       </div>
