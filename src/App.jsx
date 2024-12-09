@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Square from './components/Square';
 import './styles/main.css';
 import adventData from './data/adventData';
@@ -15,7 +15,7 @@ const App = () => {
 
     // Get current day of December 2025
     const today = new Date();
-    const isDecember2025 = today.getFullYear() === 2024 && today.getMonth() === 10;
+    const isDecember2025 = today.getFullYear() === 2024 && today.getMonth() === 11;
     // December is month 11
     setCurrentDay(isDecember2025 ? today.getDate() : null);
   }, []);
