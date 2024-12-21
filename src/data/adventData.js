@@ -47,7 +47,7 @@ const adventData = [
     { day: 20, img: day20Image, content: 'I made you a playlist. Play it today, and we’ll listen to the same songs no matter how far apart we are. https://open.spotify.com/playlist/2O36SlJNsCEYTqjNAOcmv4?si=bNBuMwHiSKSgVgIwIjdmbA&pi=u-UafWjl2RT66I'},
     { day: 21, img: day21Image, content: 'I wish I could hear you sing a Christmas carol today—your voice is more beautiful than any music.'},
     { day: 22, img: day22Image, content: 'Christmas is magical because of you. Let’s video call tonight so I can see your beautiful smile.'},
-    { day: 23, img: day23Image, content: 'Two days to go! Imagine us building a snowman together.'},
+    { day: 23, img: day23Image, content: 'Two days to go! Imagine us building a snowman together. PD: maybe this is not very Christmasy, but a nice and helpful read https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_104'},
     { day: 24, img: day24Image, content: 'It’s Christmas Eve! Even though we’re apart, you’re the best part of my holiday season. Also, here is a nice Christmas album (https://open.spotify.com/intl-es/album/5wfBADzclptjjYLFMyvazA?si=uL9ImH1bSUCO9IhMIyPrwA) for you to take 30 minutes for yourself, sit in front of the fireplace and relax (you can use your new amazing headphones with noise cancelation).'},
     { day: 25, img: day25Image, content: 'Merry Christmas, Baby ❤️❤️❤️! You’re my greatest gift, and I can’t wait until we’re celebrating together again. I choose YOU (always), let’s solve this.  PD: We still have a Avianca ticket that we could turn into another adventure!'},
   ];
